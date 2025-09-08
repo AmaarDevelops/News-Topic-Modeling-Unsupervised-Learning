@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Topic Modeling</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}"
+</head>
+<body>
+    <h1>Topic Classifier</h1>
+    <br></br>
+    <p>Enter a short news headline or a paragrpah to classifiy its topic</p>
+
+    <label for="text-input">Enter your text:</label>
+    <textarea id="text-input" rows="5" cols="50"></textarea><BR>
+
+    <button id="classify-btn">Classify Topic</button>
+
+    <h3>Prediction Results : </h3>
+
+    <div id="results">
+    <p>Predicted Topic: <span id="topic-name"></span> </p>
+    <p>Confidence : <span id='confidence'></span></p>
+    <div id="message-container"></div>
+    </div>
+
+    <div>
+        <h2>Topic Word Cloud</h2>
+        <div>
+            <canvas id="word-cloud-canvas"></canvas>
+        </div>
+        <p id="word-cloud-label">
+            Enter some text and classify a topic to see its word cloud.
+        </p>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.js"></script>
+    <script src="static/script.js"></script>
+</body>
+</html>
