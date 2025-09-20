@@ -104,7 +104,9 @@ def predict():
         return jsonify({'error' : 'No Text field provided, please provide it'})
     
     input_text = data['text']
+    print('Text before :-', input_text)
     preprocessed_text = preprocess_txt(input_text)
+    print('Preprocessed text :-', preprocessed_text)
 
     if not preprocessed_text.strip():
         return jsonify({
