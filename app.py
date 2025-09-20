@@ -16,6 +16,7 @@ app = Flask(__name__)
 CORS(app)
 nltk.download('punkt')
 nltk.download('stopwords')
+nltk.download('punkt_tab')
 try:
     model = joblib.load('NMF_Model.joblib')
     vectorizer = joblib.load('Vectorizer.joblib')
